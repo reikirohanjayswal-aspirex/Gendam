@@ -1,0 +1,948 @@
+<!-- ============================================================
+  ANCIENT MAGNETISM — FREE 3-HOUR LIVE MASTERCLASS (TagMango-safe)
+  Paste EVERYTHING into ONE TagMango Custom HTML / Embed block.
+
+  BEFORE PUBLISHING, find & replace:
+    [REGISTER_URL]  → your TagMango workshop registration link
+    [DAY], [DATE], [TIME]  → e.g. Sunday, 18 October 2026, 11:00 AM
+    [TERMS_URL], [PRIVACY_URL], [CONTACT_EMAIL]
+  Optional: set data-date on the countdown (e.g. 2026-10-18T11:00:00+05:30)
+  Edit the "Bonuses" section to match what you will actually give.
+
+  Works with NO JavaScript. Scripts only add the pixel, click tracking,
+  a real countdown, and one-video-at-a-time.
+============================================================= -->
+<style> (works even if <link> tags are stripped).
+
+  Before publishing: replace [TERMS_URL], [PRIVACY_URL], [CONTACT_EMAIL] in the footer.
+============================================================= -->
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+html, body { overflow-x: hidden; }
+
+/* ===== Root + full-bleed breakout ===== */
+#am-page {
+  --ink: #0d0b14; --ink-2: #16121f; --ink-3: #211b2e;
+  --gold: #d4a94e; --gold-soft: #ecd29a; --gold-deep: #9c7426;
+  --paper: #f7f2e8; --paper-2: #efe7d6;
+  --text: #2b2633; --muted: #6d6578;
+  --line-dark: rgba(212,169,78,0.22); --line-light: rgba(43,38,51,0.1);
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --r: 22px;
+
+  position: relative !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  left: 50% !important;
+  margin: 0 0 0 -50vw !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  display: block !important;
+  font-family: var(--sans) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  color: var(--text) !important;
+  background: var(--paper) !important;
+  text-align: left !important;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ===== Defensive reset (blocks builder styles from leaking in) ===== */
+#am-page *, #am-page *::before, #am-page *::after {
+  box-sizing: border-box; margin: 0; padding: 0; border: 0;
+  max-width: none; min-height: 0; float: none; text-shadow: none;
+}
+#am-page div, #am-page p, #am-page span, #am-page a, #am-page li, #am-page ul, #am-page ol,
+#am-page label, #am-page small, #am-page summary, #am-page details, #am-page i, #am-page button {
+  font-family: inherit; font-size: inherit; line-height: inherit; color: inherit;
+  letter-spacing: inherit; text-transform: inherit; text-align: inherit;
+  font-weight: inherit; font-style: inherit; background: transparent;
+  position: static; width: auto; height: auto; opacity: 1; box-shadow: none;
+}
+#am-page b, #am-page strong { font-family: inherit; font-size: inherit; color: inherit; font-weight: 800; }
+#am-page em { font-family: inherit; font-size: inherit; color: inherit; font-style: italic; }
+#am-page a, #am-page a:hover, #am-page a:focus, #am-page a:visited { text-decoration: none !important; color: inherit; }
+#am-page ul, #am-page ol { list-style: none !important; }
+#am-page li { list-style: none !important; display: block; }
+#am-page li::marker { content: ""; }
+#am-page li::before, #am-page li::after, #am-page p::before, #am-page a::after { content: none; }
+#am-page img, #am-page video, #am-page iframe, #am-page svg { display: block; max-width: 100%; }
+#am-page h1, #am-page h2, #am-page h3, #am-page h4 {
+  font-family: var(--serif) !important; font-weight: 600 !important; line-height: 1.1 !important;
+  letter-spacing: -0.01em !important; text-transform: none !important; color: inherit;
+  margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important;
+}
+#am-page h1 { font-size: clamp(2.3rem, 6vw, 4.3rem) !important; }
+#am-page h2 { font-size: clamp(1.95rem, 4.5vw, 3.1rem) !important; }
+#am-page h3 { font-size: clamp(1.35rem, 2.6vw, 1.7rem) !important; }
+#am-page h4 { font-family: var(--sans) !important; font-size: 0.8rem !important; font-weight: 800 !important; letter-spacing: 0.18em !important; text-transform: uppercase !important; }
+#am-page .am-toggle { display: none !important; }
+
+/* ===== Layout helpers ===== */
+#am-page .am-wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+#am-page .am-narrow { max-width: 780px; }
+#am-page .am-center { text-align: center; }
+#am-page .am-sec { position: relative; display: block; padding: 96px 0; overflow: hidden; }
+#am-page .am-dark { background: var(--ink); color: var(--paper); }
+#am-page .am-paper { background: var(--paper); color: var(--text); }
+#am-page .am-paper-2 { background: var(--paper-2); color: var(--text); }
+#am-page .am-head { margin-bottom: 52px; }
+#am-page .am-rel { position: relative; z-index: 1; }
+#am-page em.am-gold { color: var(--gold-deep); }
+#am-page .am-dark em.am-gold { color: var(--gold-soft); }
+
+#am-page .am-eyebrow {
+  display: inline-flex; align-items: center; gap: 12px; margin-bottom: 18px;
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-deep);
+}
+#am-page .am-dark .am-eyebrow { color: var(--gold); }
+#am-page .am-eyebrow::before, #am-page .am-eyebrow::after { content: ""; width: 24px; height: 1px; background: currentColor; opacity: 0.6; }
+#am-page .am-lead { display: block; font-size: 1.08rem; color: var(--muted); max-width: 640px; margin-top: 16px; }
+#am-page .am-center .am-lead { margin-left: auto; margin-right: auto; }
+#am-page .am-dark .am-lead { color: rgba(247,242,232,0.72); }
+
+/* Batik-inspired ring texture */
+#am-page .am-batik {
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; opacity: 0.12; z-index: 0;
+  background-image:
+    radial-gradient(circle at 0 0, transparent 19px, var(--gold) 19.5px, var(--gold) 20.5px, transparent 21px),
+    radial-gradient(circle at 100% 0, transparent 19px, var(--gold) 19.5px, var(--gold) 20.5px, transparent 21px),
+    radial-gradient(circle at 0 100%, transparent 19px, var(--gold) 19.5px, var(--gold) 20.5px, transparent 21px),
+    radial-gradient(circle at 100% 100%, transparent 19px, var(--gold) 19.5px, var(--gold) 20.5px, transparent 21px),
+    radial-gradient(circle at 50% 50%, var(--gold) 1.5px, transparent 2px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 10%, transparent 75%);
+          mask-image: radial-gradient(ellipse at center, #000 10%, transparent 75%);
+}
+#am-page .am-paper .am-batik, #am-page .am-paper-2 .am-batik { opacity: 0.08; }
+
+/* ===== Buttons ===== */
+#am-page .am-btn {
+  position: relative; overflow: hidden; cursor: pointer;
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  padding: 17px 40px; border-radius: 999px; border: 0;
+  background: linear-gradient(135deg, #f3dc9f 0%, #d4a94e 45%, #b8862f 100%);
+  color: #1a1308; font-family: var(--sans); text-align: center; line-height: 1.3;
+  box-shadow: 0 10px 30px rgba(212,169,78,0.35), inset 0 1px 0 rgba(255,255,255,0.5);
+  transition: transform .25s ease, box-shadow .25s ease;
+  -webkit-tap-highlight-color: transparent; user-select: none;
+}
+#am-page .am-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(212,169,78,0.5), inset 0 1px 0 rgba(255,255,255,0.5); }
+#am-page .am-btn::after {
+  content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
+  transform: skewX(-20deg); animation: am-shine 3.6s ease-in-out infinite;
+}
+#am-page .am-btn-main { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.02rem; letter-spacing: 0.06em; color: #1a1308; }
+#am-page .am-btn-sub { display: block; font-size: 0.78rem; font-weight: 600; opacity: 0.8; color: #1a1308; }
+#am-page .am-btn-arrow { display: inline-block; transition: transform .25s ease; }
+#am-page .am-btn:hover .am-btn-arrow { transform: translateX(5px); }
+@keyframes am-shine { 0%, 55% { left: -60%; } 100% { left: 140%; } }
+
+#am-page .am-pill {
+  display: inline-block; cursor: pointer; white-space: nowrap;
+  padding: 9px 20px; border-radius: 999px; background: var(--gold); color: #1a1308;
+  font-weight: 800; font-size: 0.8rem; letter-spacing: 0.06em; line-height: 1.3;
+}
+#am-page .am-pill:hover { background: var(--gold-soft); }
+
+#am-page .am-cta-block { margin-top: 44px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+#am-page .am-cta-note { display: block; font-size: 0.85rem; color: var(--muted); }
+#am-page .am-dark .am-cta-note { color: rgba(247,242,232,0.6); }
+
+/* ===== Top bar ===== */
+#am-page .am-topbar { background: var(--ink); color: var(--paper); border-bottom: 1px solid var(--line-dark); }
+#am-page .am-topbar .am-wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+#am-page .am-brand { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; white-space: nowrap; color: #fbf7ef; }
+#am-page .am-brand span { color: var(--gold); }
+#am-page .am-topbar-right { display: flex; align-items: center; gap: 16px; font-size: 0.82rem; }
+#am-page .am-topbar-meta { color: rgba(247,242,232,0.7); white-space: nowrap; }
+#am-page .am-topbar-meta b { color: var(--gold-soft); }
+
+/* ===== Hero ===== */
+#am-page .am-hero { padding: 72px 0 96px; background: radial-gradient(ellipse 80% 60% at 70% 30%, #2a2038 0%, var(--ink) 65%); color: var(--paper); }
+#am-page .am-hero-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
+#am-page .am-hero h1 { color: #fbf7ef !important; }
+#am-page .am-hero-sub { display: block; margin-top: 22px; font-size: 1.12rem; color: rgba(247,242,232,0.8); max-width: 560px; }
+#am-page .am-hero-list { margin-top: 26px; display: grid; gap: 10px; }
+#am-page .am-hero-list li { display: flex; gap: 12px; align-items: flex-start; color: rgba(247,242,232,0.9); }
+#am-page .am-hero-list li::before { content: "◆"; color: var(--gold); font-size: 0.7rem; margin-top: 7px; }
+#am-page .am-hero-q {
+  margin-top: 24px; padding: 16px 20px; border-left: 2px solid var(--gold);
+  background: linear-gradient(90deg, rgba(212,169,78,0.12), transparent);
+  font-family: var(--serif); font-style: italic; font-size: 1.3rem; line-height: 1.35; color: var(--gold-soft);
+}
+#am-page .am-hero .am-cta-block { align-items: flex-start; margin-top: 32px; }
+#am-page .am-trust { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.82rem; color: rgba(247,242,232,0.65); }
+#am-page .am-trust span::before { content: "✓ "; color: var(--gold); font-weight: 800; }
+
+#am-page .am-hero-visual { position: relative; padding: 28px 0; }
+#am-page .am-rings { position: absolute; left: 50%; top: 50%; width: 130%; height: auto; transform: translate(-50%, -50%); pointer-events: none; z-index: 0; }
+#am-page .am-rings svg { width: 100%; height: auto; overflow: visible; }
+#am-page .am-ring-a { transform-origin: 300px 300px; animation: am-spin 60s linear infinite; }
+#am-page .am-ring-b { transform-origin: 300px 300px; animation: am-spin 90s linear infinite reverse; }
+#am-page .am-ring-c { transform-origin: 300px 300px; animation: am-spin 120s linear infinite; }
+#am-page .am-pulse { transform-origin: 300px 300px; animation: am-breathe 6s ease-in-out infinite; }
+@keyframes am-spin { to { transform: rotate(360deg); } }
+@keyframes am-breathe { 0%,100% { opacity: .35; transform: scale(.96); } 50% { opacity: .7; transform: scale(1.04); } }
+
+#am-page .am-video-label { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 14px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-soft); }
+#am-page .am-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #e5484d; box-shadow: 0 0 0 4px rgba(229,72,77,0.25); animation: am-blink 1.6s ease-in-out infinite; }
+@keyframes am-blink { 50% { opacity: .35; } }
+/* 16:9 box via padding (works in older browsers too) */
+#am-page .am-video-frame {
+  position: relative; z-index: 2; width: 100%; height: 0; padding-bottom: 56.25%;
+  border-radius: var(--r); overflow: hidden; background: #000;
+  border: 1px solid rgba(212,169,78,0.45);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 8px rgba(212,169,78,0.06);
+}
+#am-page .am-video-frame iframe { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; border: 0; }
+
+/* ===== Strip ===== */
+#am-page .am-strip { background: var(--ink-2); color: var(--paper); border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); }
+#am-page .am-strip .am-wrap { display: grid; grid-template-columns: repeat(2, 1fr); }
+#am-page .am-strip-item { padding: 22px 12px; text-align: center; }
+#am-page .am-strip-item b { display: block; font-family: var(--serif); font-size: 1.9rem; font-weight: 600; line-height: 1; color: var(--gold-soft); }
+#am-page .am-strip-item span { display: block; margin-top: 6px; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(247,242,232,0.6); }
+
+/* ===== Testimonials ===== */
+#am-page .am-testi-grid { display: grid; grid-template-columns: 1fr; gap: 22px; max-width: 420px; margin: 0 auto; }
+#am-page .am-testi { border-radius: var(--r); overflow: hidden; background: var(--ink-3); border: 1px solid var(--line-dark); }
+#am-page .am-testi-media { position: relative; width: 100%; height: 0; padding-bottom: 125%; background: #000; }
+#am-page .am-testi-media video { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; object-fit: cover; }
+#am-page .am-testi-name { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; font-weight: 700; color: var(--paper); }
+#am-page .am-testi-name small { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+#am-page .am-fineprint { display: block; margin-top: 18px; font-size: 0.78rem; text-align: center; color: rgba(247,242,232,0.5); }
+
+/* ===== Problem ===== */
+#am-page .am-two { display: grid; grid-template-columns: 1fr; gap: 22px; }
+#am-page .am-card { background: #fffdf8; border: 1px solid var(--line-light); border-radius: var(--r); padding: 32px 28px; box-shadow: 0 14px 40px rgba(43,38,51,0.06); color: var(--text); }
+#am-page .am-card h3 { margin-bottom: 14px !important; color: var(--ink) !important; }
+#am-page .am-card-foot { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line-light); font-weight: 800; color: var(--ink); }
+#am-page .am-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+#am-page .am-tag { display: inline-block; padding: 6px 14px; border-radius: 999px; background: var(--paper-2); font-size: 0.85rem; font-weight: 600; }
+#am-page .am-check { display: grid; gap: 12px; }
+#am-page .am-check li { display: flex; gap: 12px; align-items: flex-start; }
+#am-page .am-check li::before { content: "✓"; flex: none; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; background: rgba(46,125,90,0.12); color: #2e7d5a; }
+
+#am-page .am-turn { position: relative; overflow: hidden; margin-top: 22px; border-radius: var(--r); padding: 40px 32px; text-align: center; background: var(--ink); color: var(--paper); }
+#am-page .am-turn h3 { color: #fbf7ef !important; }
+#am-page .am-turn-grid { margin: 24px auto 26px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-width: 620px; }
+#am-page .am-turn-grid span { display: block; padding: 12px; border: 1px solid var(--line-dark); border-radius: 14px; font-size: 0.92rem; color: rgba(247,242,232,0.85); }
+#am-page .am-turn-final { display: block; font-family: var(--serif); font-style: italic; font-size: 1.55rem; line-height: 1.3; color: var(--gold-soft); }
+
+/* ===== Insight ===== */
+#am-page .am-insight h2 { max-width: 880px; margin: 0 auto !important; }
+#am-page .am-flow-lines { display: grid; gap: 6px; max-width: 520px; margin: 34px auto; font-family: var(--serif); font-style: italic; font-size: 1.3rem; }
+#am-page .am-flow-lines span { display: block; }
+#am-page .am-flow-lines span:nth-child(1) { opacity: .4; }
+#am-page .am-flow-lines span:nth-child(2) { opacity: .55; }
+#am-page .am-flow-lines span:nth-child(3) { opacity: .72; }
+#am-page .am-flow-lines span:nth-child(4) { opacity: .95; }
+#am-page .am-state-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 26px; }
+#am-page .am-state-row span { display: inline-block; padding: 10px 22px; border-radius: 999px; border: 1px solid var(--line-dark); background: rgba(212,169,78,0.08); color: var(--gold-soft); font-weight: 700; font-size: 0.92rem; }
+
+/* ===== Teacher ===== */
+#am-page .am-teacher { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
+#am-page .am-portrait { position: relative; width: 100%; max-width: 360px; margin: 0 auto 18px; }
+#am-page .am-portrait-frame { position: absolute; top: -14px; right: -14px; bottom: -14px; left: -14px; border-radius: 28px; border: 1px solid rgba(156,116,38,0.4); transform: rotate(-3deg); }
+#am-page .am-portrait-img { position: relative; width: 100%; height: 0; padding-bottom: 125%; border-radius: 22px; overflow: hidden; box-shadow: 0 30px 60px rgba(13,11,20,0.25); }
+#am-page .am-portrait-img img { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; object-fit: cover; }
+#am-page .am-portrait-tag { position: absolute; left: 50%; bottom: -18px; transform: translateX(-50%); white-space: nowrap; padding: 10px 20px; border-radius: 999px; background: var(--ink); color: var(--paper); border: 1px solid var(--line-dark); font-size: 0.82rem; font-weight: 700; }
+#am-page .am-portrait-tag b { color: var(--gold); }
+#am-page .am-teacher-copy p { display: block; margin-top: 14px; }
+#am-page .am-quote-box { margin-top: 24px; padding: 22px 24px; border-radius: 18px; background: #fffdf8; border-left: 3px solid var(--gold); box-shadow: 0 10px 30px rgba(43,38,51,0.06); }
+#am-page .am-quote-box b { display: block; margin-bottom: 6px; font-family: var(--serif); font-size: 1.35rem; font-weight: 600; line-height: 1.25; color: var(--ink); }
+#am-page .am-quote-box span { color: var(--muted); }
+
+/* ===== Compare ===== */
+#am-page .am-compare { display: grid; grid-template-columns: 1fr; gap: 18px; }
+#am-page .am-compare-col { border-radius: var(--r); padding: 30px 26px; background: #fffdf8; border: 1px solid var(--line-light); color: var(--text); }
+#am-page .am-compare-col.is-new { background: var(--ink); color: var(--paper); border-color: var(--line-dark); box-shadow: 0 24px 60px rgba(13,11,20,0.25); }
+#am-page .am-compare-col h3 { margin-bottom: 6px !important; }
+#am-page .am-compare-col p { font-size: 0.9rem; color: var(--muted); }
+#am-page .am-compare-col.is-new p { color: rgba(247,242,232,0.6); }
+#am-page .am-chain { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; }
+#am-page .am-chain span { display: inline-block; padding: 8px 14px; border-radius: 10px; background: var(--paper-2); font-weight: 700; font-size: 0.88rem; }
+#am-page .am-chain i { font-style: normal; color: var(--muted); }
+#am-page .is-new .am-chain span { background: rgba(212,169,78,0.14); color: var(--gold-soft); }
+#am-page .is-new .am-chain span.am-first { background: var(--gold); color: #1a1308; }
+#am-page .am-compare-note { display: block; max-width: 720px; margin: 32px auto 0; text-align: center; font-weight: 700; color: var(--ink); }
+
+/* ===== 5 Movements ===== */
+#am-page .am-moves { display: grid; grid-template-columns: 1fr; gap: 14px; }
+#am-page .am-move { display: flex; gap: 18px; align-items: center; padding: 20px 22px; border-radius: 18px; background: var(--ink-2); border: 1px solid var(--line-dark); transition: transform .3s ease, border-color .3s ease; }
+#am-page .am-move:hover { transform: translateY(-4px); border-color: var(--gold); }
+#am-page .am-move-num { flex: none; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.5rem; font-weight: 600; color: var(--gold-soft); background: radial-gradient(circle at 35% 30%, rgba(212,169,78,0.35), rgba(212,169,78,0.05) 70%); border: 1px solid rgba(212,169,78,0.5); }
+#am-page .am-move-title { display: block; font-size: 0.92rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #fbf7ef; }
+#am-page .am-move-desc { display: block; margin-top: 4px; font-size: 0.92rem; color: rgba(247,242,232,0.68); }
+#am-page .am-moves-foot { display: block; margin-top: 34px; text-align: center; font-family: var(--serif); font-style: italic; font-size: 1.55rem; line-height: 1.3; color: var(--gold-soft); }
+
+/* ===== Origin ===== */
+#am-page .am-origin { display: grid; grid-template-columns: 1fr; gap: 34px; align-items: start; }
+#am-page .am-origin-copy p { display: block; margin-top: 12px; }
+#am-page .am-origin-quote { font-family: var(--serif); font-style: italic; font-size: 1.45rem; line-height: 1.3; color: var(--ink); margin-top: 20px !important; }
+#am-page .am-defs { display: grid; gap: 14px; }
+#am-page .am-def { padding: 24px; border-radius: 18px; background: #fffdf8; border: 1px solid var(--line-light); }
+#am-page .am-def-word { display: block; font-family: var(--serif); font-size: 2rem; font-weight: 600; line-height: 1; color: var(--ink); }
+#am-page .am-def-lang { display: block; margin: 6px 0 8px; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); }
+#am-page .am-def p { font-size: 0.95rem; color: var(--muted); }
+
+/* ===== Clarity / Fit ===== */
+#am-page .am-split { display: grid; grid-template-columns: 1fr; gap: 18px; }
+#am-page .am-box { border-radius: var(--r); padding: 30px 26px; background: #fffdf8; border: 1px solid var(--line-light); color: var(--text); }
+#am-page .am-box h3 { margin-bottom: 16px !important; color: var(--ink) !important; }
+#am-page .am-box ul { display: grid; gap: 11px; }
+#am-page .am-box li { display: flex; gap: 12px; align-items: flex-start; }
+#am-page .am-box.is-yes { border-top: 3px solid #2e7d5a; }
+#am-page .am-box.is-no { border-top: 3px solid #b4452f; }
+#am-page .am-box.is-yes li::before { content: "✓"; flex: none; color: #2e7d5a; font-weight: 800; }
+#am-page .am-box.is-no li::before { content: "✕"; flex: none; color: #b4452f; font-weight: 800; }
+#am-page .am-box.is-fit li::before { content: "◆"; flex: none; color: var(--gold-deep); font-size: 0.7rem; margin-top: 7px; }
+#am-page .am-box.is-unfit { background: transparent; border: 1px dashed rgba(43,38,51,0.25); }
+#am-page .am-box.is-unfit li::before { content: "—"; flex: none; color: var(--muted); }
+
+/* ===== Session + Offer ===== */
+#am-page .am-session { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
+#am-page .am-steps { position: relative; display: grid; gap: 4px; margin-top: 26px; }
+#am-page .am-steps-line { position: absolute; left: 21px; top: 22px; bottom: 22px; width: 1px; background: linear-gradient(var(--gold), rgba(212,169,78,0.1)); }
+#am-page .am-step { position: relative; display: flex; gap: 16px; padding: 12px 0; }
+#am-page .am-step-n { position: relative; z-index: 1; flex: none; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--ink); color: var(--gold-soft); border: 1px solid var(--gold); font-family: var(--serif); font-size: 1.2rem; font-weight: 600; }
+#am-page .am-step h4 { color: var(--gold-deep); }
+#am-page .am-step p { font-weight: 600; color: var(--text); }
+
+#am-page .am-offer { position: relative; overflow: hidden; border-radius: 28px; padding: 36px 26px; text-align: center; background: linear-gradient(160deg, #241c33 0%, var(--ink) 70%); color: var(--paper); border: 1px solid rgba(212,169,78,0.5); box-shadow: 0 30px 80px rgba(13,11,20,0.35); }
+#am-page .am-badge { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(212,169,78,0.14); color: var(--gold-soft); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; }
+#am-page .am-offer h3 { margin-top: 14px !important; color: #fbf7ef !important; }
+#am-page .am-offer ul { display: grid; gap: 10px; margin: 24px 0; text-align: left; }
+#am-page .am-offer li { display: flex; gap: 12px; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,0.05); font-size: 0.92rem; color: rgba(247,242,232,0.9); }
+#am-page .am-offer li::before { content: "◆"; flex: none; color: var(--gold); font-size: 0.65rem; margin-top: 6px; }
+#am-page .am-price { display: block; font-family: var(--serif); font-size: 4.2rem; font-weight: 600; line-height: 1; color: var(--gold-soft); }
+#am-page .am-price-note { display: block; margin: 6px 0 24px; font-size: 0.8rem; color: rgba(247,242,232,0.55); }
+#am-page .am-offer .am-btn { width: 100%; }
+#am-page .am-offer .am-cta-note { margin-top: 14px; }
+
+/* ===== FAQ (pure HTML) ===== */
+#am-page .am-faq { display: grid; gap: 12px; }
+#am-page .am-faq details { display: block; border-radius: 16px; background: #fffdf8; border: 1px solid var(--line-light); overflow: hidden; }
+#am-page .am-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; cursor: pointer; list-style: none; font-weight: 700; color: var(--ink); }
+#am-page .am-faq summary::-webkit-details-marker { display: none; }
+#am-page .am-faq summary::marker { content: ""; }
+#am-page .am-faq summary::after { content: "+"; flex: none; font-size: 1.5rem; line-height: 1; color: var(--gold-deep); transition: transform .25s ease; }
+#am-page .am-faq details[open] summary::after { transform: rotate(45deg); }
+#am-page .am-faq details p { display: block; padding: 0 24px 22px; color: var(--muted); }
+
+/* ===== Final + Footer ===== */
+#am-page .am-final { text-align: center; }
+#am-page .am-final h2 { max-width: 820px; margin: 0 auto !important; color: #fbf7ef !important; }
+#am-page .am-footer { background: #08070c; color: rgba(247,242,232,0.6); padding: 40px 0 120px; font-size: 0.85rem; }
+#am-page .am-legal { display: grid; gap: 10px; max-width: 780px; margin: 0 auto; }
+#am-page .am-legal details { display: block; border: 1px solid rgba(247,242,232,0.12); border-radius: 12px; }
+#am-page .am-legal summary { display: block; cursor: pointer; padding: 14px 18px; font-weight: 700; color: rgba(247,242,232,0.85); list-style: none; }
+#am-page .am-legal summary::-webkit-details-marker { display: none; }
+#am-page .am-legal summary::marker { content: ""; }
+#am-page .am-legal summary::before { content: "＋ "; color: var(--gold); }
+#am-page .am-legal details[open] summary::before { content: "－ "; }
+#am-page .am-legal-body { padding: 0 18px 16px; }
+#am-page .am-legal-body p { display: block; margin-top: 8px; }
+#am-page .am-footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin-top: 22px; }
+#am-page .am-footer-links a:hover { color: var(--gold-soft); }
+#am-page .am-copy { display: block; margin-top: 14px; text-align: center; font-size: 0.78rem; opacity: 0.7; }
+
+/* ===== Mobile bottom CTA ===== */
+#am-page .am-mobile-cta {
+  position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 9990;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 10px 10px 18px; border-radius: 999px;
+  background: rgba(13,11,20,0.95); color: var(--paper);
+  border: 1px solid var(--line-dark); box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+}
+#am-page .am-mobile-cta-text { font-size: 0.8rem; line-height: 1.3; }
+#am-page .am-mobile-cta-text b { color: var(--gold-soft); font-size: 1rem; }
+
+/* ===== Booking popup (pure CSS: checkbox toggle) ===== */
+#am-page .am-modal {
+  position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 99999;
+  display: flex; align-items: center; justify-content: center; padding: 18px;
+  visibility: hidden; opacity: 0; transition: opacity .3s ease, visibility .3s ease;
+}
+#am-page .am-toggle:checked + .am-modal { visibility: visible; opacity: 1; }
+#am-page .am-modal-bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; background: rgba(8,7,12,0.8); cursor: pointer; }
+#am-page .am-modal-card {
+  position: relative; z-index: 1; width: 100%; max-width: 500px; max-height: 90vh; overflow-y: auto;
+  background: linear-gradient(160deg, #241c33 0%, var(--ink) 70%); color: var(--paper);
+  border: 1px solid rgba(212,169,78,0.5); border-radius: 26px; padding: 36px 26px 28px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  transform: translateY(16px); transition: transform .3s ease;
+}
+#am-page .am-toggle:checked + .am-modal .am-modal-card { transform: translateY(0); }
+#am-page .am-modal-x { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid var(--line-dark); background: rgba(255,255,255,0.05); color: var(--gold-soft); font-size: 1.3rem; line-height: 1; }
+#am-page .am-modal-card h3 { margin: 12px 0 8px !important; color: #fbf7ef !important; padding-right: 30px !important; }
+#am-page .am-modal-intro { display: block; font-size: 0.92rem; color: rgba(247,242,232,0.72); }
+#am-page .am-modal-q { display: block; margin: 22px 0 12px; font-weight: 700; font-size: 0.95rem; color: #fbf7ef; }
+#am-page .am-opts { display: grid; gap: 10px; }
+#am-page .am-opt {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 15px 18px; border-radius: 14px; cursor: pointer;
+  background: rgba(255,255,255,0.05); border: 1px solid var(--line-dark);
+  color: var(--paper); font-weight: 600; font-size: 0.95rem; line-height: 1.35;
+  transition: border-color .2s ease, background .2s ease;
+}
+#am-page .am-opt:hover { border-color: var(--gold); background: rgba(212,169,78,0.1); }
+#am-page .am-opt-arrow { flex: none; color: var(--gold); font-weight: 800; }
+#am-page .am-modal-foot { display: block; margin-top: 14px; text-align: center; font-size: 0.78rem; color: rgba(247,242,232,0.5); }
+
+/* ===== Breakpoints ===== */
+@media (min-width: 720px) {
+  #am-page .am-strip .am-wrap { grid-template-columns: repeat(4, 1fr); }
+  #am-page .am-testi-grid { grid-template-columns: repeat(3, 1fr); max-width: none; }
+  #am-page .am-two, #am-page .am-compare, #am-page .am-split { grid-template-columns: 1fr 1fr; }
+  #am-page .am-turn-grid { grid-template-columns: repeat(4, 1fr); }
+  #am-page .am-mobile-cta { display: none; }
+  #am-page .am-footer { padding-bottom: 40px; }
+}
+@media (min-width: 960px) {
+  #am-page .am-hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 56px; }
+  #am-page .am-teacher { grid-template-columns: 0.85fr 1.15fr; gap: 72px; }
+  #am-page .am-portrait { margin-bottom: 0; }
+  #am-page .am-origin { grid-template-columns: 1.2fr 0.8fr; gap: 56px; }
+  #am-page .am-session { grid-template-columns: 1fr 1fr; gap: 64px; }
+  #am-page .am-moves { grid-template-columns: repeat(5, 1fr); }
+  #am-page .am-move { flex-direction: column; text-align: center; justify-content: flex-start; padding: 30px 18px; }
+}
+@media (max-width: 719px) {
+  #am-page .am-sec { padding: 60px 0; }
+  #am-page .am-head { margin-bottom: 32px; }
+  #am-page .am-topbar-meta { display: none; }
+  #am-page .am-hero { padding: 40px 0 60px; }
+  #am-page .am-hero .am-cta-block { align-items: stretch; }
+  #am-page .am-btn { width: 100%; padding: 16px 22px; }
+  #am-page .am-card, #am-page .am-turn { padding: 26px 20px; }
+  #am-page .am-hero-q { font-size: 1.15rem; }
+  #am-page .am-turn-final, #am-page .am-moves-foot { font-size: 1.3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #am-page *, #am-page *::before, #am-page *::after { animation: none !important; transition: none !important; }
+}
+</style>
+<style>
+/* ===== Masterclass additions ===== */
+#am-page .am-event {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 28px;
+  border-radius: 18px; overflow: hidden; border: 1px solid var(--line-dark); background: var(--line-dark);
+}
+#am-page .am-event-cell { padding: 14px 16px; background: rgba(13,11,20,0.92); }
+#am-page .am-event-k { display: block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+#am-page .am-event-v { display: block; margin-top: 4px; font-weight: 700; font-size: 0.98rem; color: #fbf7ef; }
+
+#am-page .am-free { display: inline-block; margin-left: 6px; padding: 2px 10px; border-radius: 999px; background: #2e7d5a; color: #fff; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; vertical-align: middle; }
+#am-page .am-strike { text-decoration: line-through; opacity: 0.55; margin-right: 6px; }
+
+#am-page .am-countdown { display: none; gap: 8px; margin-top: 4px; }
+#am-page .am-countdown.is-on { display: flex; }
+#am-page .am-cd-box { min-width: 58px; padding: 8px 6px; border-radius: 12px; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid var(--line-dark); }
+#am-page .am-cd-n { display: block; font-family: var(--serif); font-size: 1.6rem; font-weight: 600; line-height: 1; color: var(--gold-soft); }
+#am-page .am-cd-l { display: block; margin-top: 4px; font-size: 0.6rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247,242,232,0.6); }
+#am-page .am-cd-label { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(247,242,232,0.6); }
+
+/* Hero portrait with rings */
+#am-page .am-hero-portrait { position: relative; width: 100%; max-width: 420px; margin: 0 auto; padding: 30px 0; }
+#am-page .am-hero-portrait .am-rings { width: 150%; }
+#am-page .am-hero-photo { position: relative; z-index: 2; width: 100%; height: 0; padding-bottom: 118%; border-radius: 26px; overflow: hidden; border: 1px solid rgba(212,169,78,0.45); box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 8px rgba(212,169,78,0.06); background: var(--ink-3); }
+#am-page .am-hero-photo img { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; object-fit: cover; }
+#am-page .am-hero-badge { position: absolute; z-index: 3; left: 50%; bottom: 8px; transform: translateX(-50%); white-space: nowrap; padding: 10px 18px; border-radius: 999px; background: var(--ink); border: 1px solid var(--gold); color: var(--paper); font-size: 0.82rem; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+#am-page .am-hero-badge b { color: var(--gold-soft); }
+#am-page .am-live-chip { position: absolute; z-index: 3; top: 46px; left: -6px; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: rgba(13,11,20,0.92); border: 1px solid var(--line-dark); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-soft); white-space: nowrap; }
+
+/* Pain list */
+#am-page .am-pain { display: grid; grid-template-columns: 1fr; gap: 12px; max-width: 860px; margin: 0 auto; }
+#am-page .am-pain-item { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #fffdf8; border: 1px solid var(--line-light); }
+#am-page .am-pain-item::before { content: "?"; flex: none; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(156,116,38,0.12); color: var(--gold-deep); font-weight: 800; font-family: var(--serif); font-size: 1.1rem; }
+#am-page .am-pain-foot { display: block; max-width: 760px; margin: 30px auto 0; text-align: center; font-family: var(--serif); font-style: italic; font-size: 1.5rem; line-height: 1.3; color: var(--ink); }
+
+/* Learn grid */
+#am-page .am-learn { display: grid; grid-template-columns: 1fr; gap: 14px; }
+#am-page .am-learn-item { position: relative; padding: 26px 24px; border-radius: 18px; background: var(--ink-2); border: 1px solid var(--line-dark); }
+#am-page .am-learn-n { display: block; font-family: var(--serif); font-size: 2.2rem; font-weight: 600; line-height: 1; color: rgba(212,169,78,0.45); }
+#am-page .am-learn-t { display: block; margin-top: 10px; font-weight: 800; font-size: 1.05rem; color: #fbf7ef; }
+#am-page .am-learn-d { display: block; margin-top: 6px; font-size: 0.93rem; color: rgba(247,242,232,0.7); }
+
+/* Agenda */
+#am-page .am-agenda { position: relative; max-width: 820px; margin: 0 auto; display: grid; gap: 16px; }
+#am-page .am-hour { display: grid; grid-template-columns: 1fr; gap: 0; border-radius: 20px; overflow: hidden; background: #fffdf8; border: 1px solid var(--line-light); box-shadow: 0 14px 40px rgba(43,38,51,0.06); }
+#am-page .am-hour-side { padding: 18px 22px; background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+#am-page .am-hour-label { display: block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+#am-page .am-hour-name { display: block; font-family: var(--serif); font-size: 1.6rem; font-weight: 600; line-height: 1.1; color: #fbf7ef; }
+#am-page .am-hour-time { font-size: 0.8rem; color: rgba(247,242,232,0.6); white-space: nowrap; }
+#am-page .am-hour-body { padding: 20px 22px; }
+#am-page .am-hour-body ul { display: grid; gap: 9px; }
+#am-page .am-hour-body li { display: flex; gap: 12px; align-items: flex-start; }
+#am-page .am-hour-body li::before { content: "◆"; flex: none; color: var(--gold-deep); font-size: 0.65rem; margin-top: 7px; }
+#am-page .am-break { display: block; text-align: center; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+#am-page .am-break::before, #am-page .am-break::after { content: " ── "; color: rgba(156,116,38,0.5); }
+
+/* Why 3 hours */
+#am-page .am-why { display: grid; grid-template-columns: 1fr; gap: 14px; }
+#am-page .am-why-card { padding: 26px 24px; border-radius: 18px; background: #fffdf8; border: 1px solid var(--line-light); }
+#am-page .am-why-card b { display: block; font-family: var(--serif); font-size: 1.4rem; font-weight: 600; line-height: 1.2; color: var(--ink); margin-bottom: 8px; }
+#am-page .am-why-card span { color: var(--muted); }
+
+/* Bonuses */
+#am-page .am-bonus { display: grid; grid-template-columns: 1fr; gap: 14px; }
+#am-page .am-bonus-card { position: relative; padding: 28px 24px 24px; border-radius: 18px; background: linear-gradient(160deg, #241c33 0%, var(--ink) 75%); border: 1px solid rgba(212,169,78,0.4); color: var(--paper); }
+#am-page .am-bonus-tag { display: inline-block; padding: 4px 12px; border-radius: 999px; background: var(--gold); color: #1a1308; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
+#am-page .am-bonus-t { display: block; margin-top: 14px; font-family: var(--serif); font-size: 1.45rem; font-weight: 600; line-height: 1.2; color: #fbf7ef; }
+#am-page .am-bonus-d { display: block; margin-top: 8px; font-size: 0.92rem; color: rgba(247,242,232,0.72); }
+#am-page .am-bonus-note { display: block; margin-top: 18px; text-align: center; font-size: 0.85rem; color: rgba(247,242,232,0.6); }
+
+/* Prepare */
+#am-page .am-prep { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; max-width: 860px; margin: 0 auto; }
+#am-page .am-prep-item { padding: 20px 16px; border-radius: 16px; text-align: center; background: #fffdf8; border: 1px solid var(--line-light); }
+#am-page .am-prep-ico { display: block; font-size: 1.6rem; line-height: 1; }
+#am-page .am-prep-t { display: block; margin-top: 10px; font-weight: 800; color: var(--ink); }
+#am-page .am-prep-d { display: block; margin-top: 4px; font-size: 0.85rem; color: var(--muted); }
+
+/* Final date line */
+#am-page .am-final-date { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; margin-top: 22px; font-size: 0.92rem; font-weight: 700; color: var(--gold-soft); }
+
+@media (min-width: 720px) {
+  #am-page .am-event { grid-template-columns: repeat(4, 1fr); }
+  #am-page .am-pain { grid-template-columns: 1fr 1fr; }
+  #am-page .am-learn { grid-template-columns: repeat(2, 1fr); }
+  #am-page .am-why { grid-template-columns: repeat(3, 1fr); }
+  #am-page .am-bonus { grid-template-columns: repeat(3, 1fr); }
+  #am-page .am-prep { grid-template-columns: repeat(4, 1fr); }
+  #am-page .am-hour { grid-template-columns: 220px 1fr; }
+  #am-page .am-hour-side { flex-direction: column; align-items: flex-start; justify-content: center; }
+}
+@media (min-width: 960px) {
+  #am-page .am-learn { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 719px) {
+  #am-page .am-live-chip { left: 0; top: 40px; }
+  #am-page .am-hero-portrait { max-width: 320px; }
+  #am-page .am-pain-foot { font-size: 1.3rem; }
+}
+</style>
+
+<div id="am-page">
+
+  <!-- TOP BAR -->
+  <div class="am-topbar">
+    <div class="am-wrap">
+      <div class="am-brand">Ancient <span>Magnetism</span></div>
+      <div class="am-topbar-right">
+        <span class="am-topbar-meta">Free live masterclass · <b>[DATE]</b></span>
+        <a href="[REGISTER_URL]" class="am-pill">SAVE MY SEAT</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="am-sec am-hero am-dark">
+    <div class="am-batik"></div>
+    <div class="am-wrap am-rel">
+      <div class="am-hero-grid">
+        <div>
+          <div class="am-eyebrow">Free 3-Hour Live Masterclass</div>
+          <h1>Why your healing tools work for everyone — <em class="am-gold">except you.</em></h1>
+          <p class="am-hero-sub">A free, live, 3-hour experiential masterclass on Ancient Magnetism (Ilmu Gendam) for healers, coaches and practitioners. Learn and practise the inner state that sits underneath every technique you already know.</p>
+
+          <div class="am-event">
+            <div class="am-event-cell"><span class="am-event-k">Date</span><span class="am-event-v">[DAY], [DATE]</span></div>
+            <div class="am-event-cell"><span class="am-event-k">Time</span><span class="am-event-v">[TIME] IST</span></div>
+            <div class="am-event-cell"><span class="am-event-k">Duration</span><span class="am-event-v">3 hours, live</span></div>
+            <div class="am-event-cell"><span class="am-event-k">Where</span><span class="am-event-v">Zoom · Online</span></div>
+          </div>
+
+          <div class="am-cta-block">
+            <a href="[REGISTER_URL]" class="am-btn">
+              <span class="am-btn-main">RESERVE MY FREE SEAT <span class="am-btn-arrow">→</span></span>
+              <span class="am-btn-sub">Free · Joining link on WhatsApp &amp; email</span>
+            </a>
+            <!-- Countdown: set data-date below to the real start time, e.g. 2026-10-18T11:00:00+05:30. Leave empty to hide. -->
+            <span class="am-cd-label am-countdown-label" style="display:none;">Masterclass starts in</span>
+            <div class="am-countdown" data-date="">
+              <div class="am-cd-box"><span class="am-cd-n" data-u="d">00</span><span class="am-cd-l">Days</span></div>
+              <div class="am-cd-box"><span class="am-cd-n" data-u="h">00</span><span class="am-cd-l">Hours</span></div>
+              <div class="am-cd-box"><span class="am-cd-n" data-u="m">00</span><span class="am-cd-l">Mins</span></div>
+              <div class="am-cd-box"><span class="am-cd-n" data-u="s">00</span><span class="am-cd-l">Secs</span></div>
+            </div>
+            <div class="am-trust"><span>100% free</span><span>Live practice, not a lecture</span><span>Live Q&amp;A with Rohan</span></div>
+          </div>
+        </div>
+
+        <div class="am-hero-portrait">
+          <div class="am-rings" aria-hidden="true">
+            <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="amGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#d4a94e" stop-opacity="0.45" />
+                  <stop offset="60%" stop-color="#d4a94e" stop-opacity="0.06" />
+                  <stop offset="100%" stop-color="#d4a94e" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <circle class="am-pulse" cx="300" cy="300" r="230" fill="url(#amGlow)" />
+              <g class="am-ring-a" fill="none" stroke="#d4a94e" stroke-opacity="0.35">
+                <circle cx="300" cy="300" r="270" stroke-dasharray="2 10" />
+                <circle cx="300" cy="30" r="5" fill="#ecd29a" stroke="none" />
+              </g>
+              <g class="am-ring-b" fill="none" stroke="#d4a94e" stroke-opacity="0.25">
+                <circle cx="300" cy="300" r="215" />
+                <circle cx="515" cy="300" r="4" fill="#d4a94e" stroke="none" />
+              </g>
+              <g class="am-ring-c" fill="none" stroke="#ecd29a" stroke-opacity="0.18">
+                <ellipse cx="300" cy="300" rx="285" ry="120" />
+                <ellipse cx="300" cy="300" rx="120" ry="285" />
+              </g>
+            </svg>
+          </div>
+          <div class="am-live-chip"><span class="am-dot"></span> Live on Zoom</div>
+          <div class="am-hero-photo">
+            <img src="https://res.cloudinary.com/dtazgnwsf/image/upload/v1788947605/fkumf1s3ck3ozcuas5qj.png" alt="Rohan Jayswal" />
+          </div>
+          <div class="am-hero-badge">Hosted by <b>Rohan Jayswal</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRIP -->
+  <div class="am-strip">
+    <div class="am-wrap">
+      <div class="am-strip-item"><b>3 hrs</b><span>Live session</span></div>
+      <div class="am-strip-item"><b>₹0</b><span>Free to join</span></div>
+      <div class="am-strip-item"><b>5</b><span>Movements explained</span></div>
+      <div class="am-strip-item"><b>Q&amp;A</b><span>With Rohan</span></div>
+    </div>
+  </div>
+
+  <!-- IS THIS YOU -->
+  <div class="am-sec am-paper">
+    <div class="am-wrap">
+      <div class="am-head am-center">
+        <div class="am-eyebrow">Is This You?</div>
+        <h2>You can hold space for others. <em class="am-gold">So why is it so hard to hold it for yourself?</em></h2>
+      </div>
+      <div class="am-pain">
+        <div class="am-pain-item"><span>You stay calm with a panicking client — then react to the same trigger at home.</span></div>
+        <div class="am-pain-item"><span>You've learned Reiki, NLP, tarot or hypnosis, yet your own patterns haven't really changed.</span></div>
+        <div class="am-pain-item"><span>Some sessions feel powerful and others feel flat — and you can't tell why.</span></div>
+        <div class="am-pain-item"><span>You keep collecting certifications, hoping the next one will be the missing piece.</span></div>
+        <div class="am-pain-item"><span>You give energy all day and end up drained, scattered or doubting yourself.</span></div>
+        <div class="am-pain-item"><span>Your thoughts run at 2 AM, even though you teach others how to quiet theirs.</span></div>
+      </div>
+      <p class="am-pain-foot">It's not that you need another technique. You may need to work on the state you bring to all of them.</p>
+    </div>
+  </div>
+
+  <!-- WHAT YOU'LL DISCOVER -->
+  <div class="am-sec am-dark">
+    <div class="am-batik"></div>
+    <div class="am-wrap am-rel">
+      <div class="am-head am-center">
+        <div class="am-eyebrow">In These 3 Hours</div>
+        <h2>What you'll learn <em class="am-gold">and practise live.</em></h2>
+      </div>
+      <div class="am-learn">
+        <div class="am-learn-item"><span class="am-learn-n">01</span><span class="am-learn-t">The missing layer</span><span class="am-learn-d">Why the same technique works brilliantly one day and falls flat the next — and what's really changing.</span></div>
+        <div class="am-learn-item"><span class="am-learn-n">02</span><span class="am-learn-t">What Ilmu Gendam really is</span><span class="am-learn-d">The Javanese tradition behind Ancient Magnetism, and why it has nothing to do with mind control.</span></div>
+        <div class="am-learn-item"><span class="am-learn-n">03</span><span class="am-learn-t">The 5 Movements map</span><span class="am-learn-d">State, Focus, Absorption, Magnetism and Application — how they build on each other.</span></div>
+        <div class="am-learn-item"><span class="am-learn-n">04</span><span class="am-learn-t">Live guided practice</span><span class="am-learn-d">Experience Movement I — State — together, and notice what shifts in your own attention.</span></div>
+        <div class="am-learn-item"><span class="am-learn-n">05</span><span class="am-learn-t">Bringing it into sessions</span><span class="am-learn-d">How to carry a steadier state into your client work, conversations and daily life.</span></div>
+        <div class="am-learn-item"><span class="am-learn-n">06</span><span class="am-learn-t">Your questions answered</span><span class="am-learn-d">Open Q&amp;A with Rohan about your own practice, patterns and next steps.</span></div>
+      </div>
+      <div class="am-cta-block">
+        <a href="[REGISTER_URL]" class="am-btn">
+          <span class="am-btn-main">YES, SAVE MY FREE SEAT <span class="am-btn-arrow">→</span></span>
+          <span class="am-btn-sub">[DAY], [DATE] · [TIME] IST</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENDA -->
+  <div class="am-sec am-paper-2">
+    <div class="am-wrap">
+      <div class="am-head am-center">
+        <div class="am-eyebrow">The 3-Hour Flow</div>
+        <h2>Hour by hour.</h2>
+        <p class="am-lead">Structured with short breaks so you stay fresh, present and practising the whole way through.</p>
+      </div>
+      <div class="am-agenda">
+        <div class="am-hour">
+          <div class="am-hour-side"><div><span class="am-hour-label">Hour 1</span><span class="am-hour-name">Understand</span></div><span class="am-hour-time">~60 min</span></div>
+          <div class="am-hour-body"><ul>
+            <li>Why tools work for others but not for you</li>
+            <li>The origins of Ilmu Gendam and the Javanese inner traditions</li>
+            <li>What Ancient Magnetism is — and what it is not</li>
+          </ul></div>
+        </div>
+        <span class="am-break">Short break</span>
+        <div class="am-hour">
+          <div class="am-hour-side"><div><span class="am-hour-label">Hour 2</span><span class="am-hour-name">Experience</span></div><span class="am-hour-time">~60 min</span></div>
+          <div class="am-hour-body"><ul>
+            <li>The 5 Movements explained step by step</li>
+            <li>Guided live practice of Movement I — State</li>
+            <li>Noticing and sharing what shifted</li>
+          </ul></div>
+        </div>
+        <span class="am-break">Short break</span>
+        <div class="am-hour">
+          <div class="am-hour-side"><div><span class="am-hour-label">Hour 3</span><span class="am-hour-name">Apply</span></div><span class="am-hour-time">~60 min</span></div>
+          <div class="am-hour-body"><ul>
+            <li>Bringing this state into your sessions and daily life</li>
+            <li>Live Q&amp;A with Rohan</li>
+            <li>How to go deeper, if you want to</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY 3 HOURS -->
+  <div class="am-sec am-paper">
+    <div class="am-wrap">
+      <div class="am-head am-center">
+        <div class="am-eyebrow">Why 3 Hours?</div>
+        <h2>This isn't a 45-minute pitch <em class="am-gold">dressed up as a webinar.</em></h2>
+      </div>
+      <div class="am-why">
+        <div class="am-why-card"><b>State can't be rushed.</b><span>Settling into a different inner state takes time. You need room to slow down, not a race through slides.</span></div>
+        <div class="am-why-card"><b>You'll practise, not just listen.</b><span>A big part of the session is guided practice, so you leave with an experience rather than only notes.</span></div>
+        <div class="am-why-card"><b>Real questions, real answers.</b><span>Time for open Q&amp;A so your specific situation gets addressed, not skipped.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOST -->
+  <div class="am-sec am-paper-2">
+    <div class="am-batik"></div>
+    <div class="am-wrap am-rel">
+      <div class="am-teacher">
+        <div class="am-portrait">
+          <div class="am-portrait-frame"></div>
+          <div class="am-portrait-img">
+            <img src="https://res.cloudinary.com/dtazgnwsf/image/upload/v1788947605/fkumf1s3ck3ozcuas5qj.png" alt="Rohan Jayswal" />
+          </div>
+          <div class="am-portrait-tag"><b>Rohan Jayswal</b> · Your host</div>
+        </div>
+        <div class="am-teacher-copy">
+          <div class="am-eyebrow">Meet Your Host</div>
+          <h2>Rohan Jayswal</h2>
+          <p><b>Ilmu Gendam practitioner and teacher of Ancient Magnetism.</b> Rohan works with healers, coaches and spiritual practitioners who are skilled at helping others but struggle to hold their own state.</p>
+          <p>His approach is rooted in the traditional Javanese way of passing on this knowledge — person to person, through direct practice rather than theory alone.</p>
+          <div class="am-quote-box">
+            <b>“Before you can magnetise your work, you have to magnetise your state.”</b>
+            <span>That's the starting point for everything in this masterclass.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="am-sec am-dark">
+    <div class="am-wrap">
+      <div class="am-head am-center">
+        <div class="am-eyebrow">Practitioner Voices</div>
+        <h2>What practitioners say after working with Rohan.</h2>
+      </div>
+      <div class="am-testi-grid">
+        <div class="am-testi">
+          <div class="am-testi-media"><video controls playsinline preload="metadata" src="https://res.cloudinary.com/oaql3gey/video/upload/v1789269761/Neeraj_Harinath_feedback.mp4"></video></div>
+          <div class="am-testi-name">Neeraj Harinath <small>Participant</small></div>
+        </div>
+        <div class="am-testi">
+          <div class="am-testi-media"><video controls playsinline preload="metadata" src="https://res.cloudinary.com/oaql3gey/video/upload/v1789269700/Tusar_feedback.mp4"></video></div>
+          <div class="am-testi-name">Tusar <small>Participant</small></div>
+        </div>
+        <div class="am-testi">
+          <div class="am-testi-media"><video controls playsinline preload="metadata" src="https://res.cloudinary.com/oaql3gey/video/upload/v1789269356/Subhrajit_feedback.mp4"></video></div>
+          <div class="am-testi-name">Subhrajit <small>Participant</small></div>
+        </div>
+      </div>
+      <p class="am-fineprint">Shared with permission. Individual experiences vary and are not a guarantee of any specific result.</p>
+    </div>
+  </div>
+
+  <!-- BONUSES (edit to match what you will actually give) -->
+  <div class="am-sec am-dark" style="background: var(--ink-2);">
+    <div class="am-batik"></div>
+    <div class="am-wrap am-rel">
+      <div class="am-head am-center">
+        <div class="am-eyebrow">For Live Attendees</div>
+        <h2>Stay till the end <em class="am-gold">and receive.</em></h2>
+      </div>
+      <div class="am-bonus">
+        <div class="am-bonus-card"><span class="am-bonus-tag">Bonus 1</span><span class="am-bonus-t">Guided State practice audio</span><span class="am-bonus-d">A recorded version of the Movement I practice so you can repeat it daily.</span></div>
+        <div class="am-bonus-card"><span class="am-bonus-tag">Bonus 2</span><span class="am-bonus-t">5 Movements map (PDF)</span><span class="am-bonus-d">A one-page reference of the full framework to keep beside your practice space.</span></div>
+        <div class="am-bonus-card"><span class="am-bonus-tag">Bonus 3</span><span class="am-bonus-t">Special attendee offer</span><span class="am-bonus-d">An offer to continue with Rohan, shared only with people who attend live.</span></div>
+      </div>
+      <span class="am-bonus-note">Bonuses are shared in the live session.</span>
+    </div>
+  </div>
+
+  <!-- FIT -->
+  <div class="am-sec am-paper">
+    <div class="am-wrap">
+      <div class="am-head am-center">
+        <div class="am-eyebrow">Who It's For</div>
+        <h2>Is this masterclass for you?</h2>
+      </div>
+      <div class="am-split">
+        <div class="am-box is-fit">
+          <h3>Join if you…</h3>
+          <ul>
+            <li>Practise healing, coaching, spiritual or transformational work.</li>
+            <li>Are good at helping others but struggle to hold your own state.</li>
+            <li>Have done several courses and still feel something is missing.</li>
+            <li>Are curious about Javanese traditions and Ilmu Gendam.</li>
+            <li>Are willing to practise, not just watch.</li>
+          </ul>
+        </div>
+        <div class="am-box is-unfit">
+          <h3>Skip it if you…</h3>
+          <ul>
+            <li>Want to influence or control other people.</li>
+            <li>Are looking for therapy or medical treatment.</li>
+            <li>Want instant results without practice.</li>
+            <li>Can't give it your attention for 3 hours.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PREPARE -->
+  <div class="am-sec am-paper-2">
+    <div class="am-wrap">
+      <div class="am-head am-center">
+        <div class="am-eyebrow">Before You Join</div>
+        <h2>How to get the most from it.</h2>
+      </div>
+      <div class="am-prep">
+        <div class="am-prep-item"><span class="am-prep-ico">🎧</span><span class="am-prep-t">Quiet space</span><span class="am-prep-d">Somewhere you won't be disturbed</span></div>
+        <div class="am-prep-item"><span class="am-prep-ico">💻</span><span class="am-prep-t">Laptop or phone</span><span class="am-prep-d">With Zoom installed &amp; earphones</span></div>
+        <div class="am-prep-item"><span class="am-prep-ico">📓</span><span class="am-prep-t">Notebook</span><span class="am-prep-d">To capture what you notice</span></div>
+        <div class="am-prep-item"><span class="am-prep-ico">⏳</span><span class="am-prep-t">Full 3 hours</span><span class="am-prep-d">Join on time and stay till the end</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="am-sec am-paper">
+    <div class="am-wrap am-narrow">
+      <div class="am-head am-center">
+        <div class="am-eyebrow">Questions</div>
+        <h2>Before you register.</h2>
+      </div>
+      <div class="am-faq">
+        <details><summary>Is the masterclass really free?</summary><p>Yes. There's no charge to register or attend.</p></details>
+        <details><summary>How will I get the joining link?</summary><p>After you register, you'll receive the Zoom link and reminders on WhatsApp and email. Please check both, including your spam folder.</p></details>
+        <details><summary>Will there be a recording?</summary><p>This is a live, experiential session and the practice works best live, so please plan to attend in real time.</p></details>
+        <details><summary>Is this hypnosis or mind control?</summary><p>No. Ancient Magnetism focuses on your own state, attention and presence. Manipulating or controlling others is explicitly outside its purpose.</p></details>
+        <details><summary>Do I need any prior experience?</summary><p>It's designed for people who already have some healing, coaching or spiritual practice, but curious beginners are welcome.</p></details>
+        <details><summary>Will anything be sold?</summary><p>Towards the end, Rohan will share how you can continue working with him if you'd like to. There's no obligation — the masterclass is complete on its own.</p></details>
+        <details><summary>Can I join from my phone?</summary><p>Yes. A laptop gives the best experience, but a phone with Zoom and earphones works fine.</p></details>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="am-sec am-dark am-final">
+    <div class="am-batik"></div>
+    <div class="am-wrap am-rel">
+      <div class="am-eyebrow">3 Hours · Free · Live</div>
+      <h2>Give yourself the same attention <em class="am-gold">you give everyone else.</em></h2>
+      <div class="am-final-date"><span>📅 [DAY], [DATE]</span><span>⏰ [TIME] IST</span><span>📍 Zoom</span></div>
+      <div class="am-cta-block">
+        <a href="[REGISTER_URL]" class="am-btn">
+          <span class="am-btn-main">RESERVE MY FREE SEAT <span class="am-btn-arrow">→</span></span>
+          <span class="am-btn-sub">Takes 30 seconds · 100% free</span>
+        </a>
+        <span class="am-cta-note">Joining link sent on WhatsApp &amp; email after registration</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="am-footer">
+    <div class="am-wrap">
+      <div class="am-legal">
+        <details>
+          <summary>Disclaimer</summary>
+          <div class="am-legal-body">
+            <p>Ancient Magnetism (Ilmu Gendam) is offered as a traditional Javanese practice for self-development and educational exploration only.</p>
+            <p>It is not psychotherapy, psychiatry, counselling or medical treatment, and is not a substitute for professional diagnosis or care. If you have a psychiatric or medical condition, please consult a licensed professional.</p>
+            <p>The practice focuses on your own inner state. Any use aimed at manipulating or coercing others is rejected. Individual experiences vary; no personal, professional, health or financial outcome is guaranteed.</p>
+          </div>
+        </details>
+      </div>
+      <div class="am-footer-links">
+        <a href="[TERMS_URL]">Terms</a>
+        <a href="[PRIVACY_URL]">Privacy Policy</a>
+        <a href="mailto:[CONTACT_EMAIL]">Contact: [CONTACT_EMAIL]</a>
+      </div>
+      <p class="am-copy">© 2026 Rohan Jayswal · Ancient Magnetism (Ilmu Gendam). All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- MOBILE BOTTOM CTA -->
+  <div class="am-mobile-cta">
+    <div class="am-mobile-cta-text"><b>FREE</b> · 3-hr live<br />[DATE] · [TIME]</div>
+    <a href="[REGISTER_URL]" class="am-pill">SAVE MY SEAT</a>
+  </div>
+</div>
+
+<!-- OPTIONAL EXTRAS (page works fully even if the builder ignores scripts) -->
+<script>
+(function () {
+  try {
+    /* Meta Pixel — delete this block if the pixel is already set in TagMango settings */
+    if (!window.fbq) {
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '827596770415609');
+      fbq('track', 'PageView');
+    }
+
+    /* Track register clicks */
+    var links = document.querySelectorAll('#am-page a.am-btn, #am-page a.am-pill');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function () { if (window.fbq) fbq('track', 'Lead', { content_name: 'Free 3-hour masterclass' }); });
+    }
+
+    /* Real countdown to the masterclass start (only shows if data-date is set and in the future) */
+    var cd = document.querySelector('#am-page .am-countdown');
+    var lbl = document.querySelector('#am-page .am-countdown-label');
+    var target = cd ? Date.parse(cd.getAttribute('data-date')) : NaN;
+    if (cd && !isNaN(target) && target > Date.now()) {
+      cd.classList.add('is-on'); if (lbl) lbl.style.display = 'block';
+      var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+      var tick = function () {
+        var diff = Math.max(0, target - Date.now());
+        var s = Math.floor(diff / 1000);
+        var vals = { d: Math.floor(s / 86400), h: Math.floor(s % 86400 / 3600), m: Math.floor(s % 3600 / 60), s: s % 60 };
+        var els = cd.querySelectorAll('[data-u]');
+        for (var j = 0; j < els.length; j++) els[j].textContent = pad(vals[els[j].getAttribute('data-u')]);
+        if (diff === 0) { cd.classList.remove('is-on'); if (lbl) lbl.style.display = 'none'; clearInterval(timer); }
+      };
+      tick(); var timer = setInterval(tick, 1000);
+    }
+
+    /* Only one testimonial video plays at a time */
+    var vids = document.querySelectorAll('#am-page video');
+    for (var k = 0; k < vids.length; k++) {
+      vids[k].addEventListener('play', function () { for (var x = 0; x < vids.length; x++) if (vids[x] !== this) vids[x].pause(); });
+    }
+  } catch (e) {}
+})();
+</script>
